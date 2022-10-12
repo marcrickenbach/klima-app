@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+.appContainer {
+  max-width: 95vw; 
+  height: 95vh;
+  margin: 20px auto;
+  background-color: azure;
+  /* background-image: url(./logo.svg); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weatherPanel {
+  color: gainsboro;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.xBtn {
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.infoTable {
+  font-size: larger;
+  width: 100%;
+  height: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.refreshIcon {
+  font-size: 75px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cityTitle {
+  font-size: 20px;
+}
+
+.lighSelect {
+  text-decoration: none;
+  color: salmon;
+  word-spacing: 25px;
+}
+
+.lighSelect:hover {
+  color: darkgreen;
 }

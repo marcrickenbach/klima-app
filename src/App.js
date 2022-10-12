@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { Container, Col, Row } from 'reactstrap';
+import WeatherPanel from './components/WeatherPanel';
+import LeftPanel from './components/LeftPanel';
+import WeatherPanelList from './components/WeatherPanelList';
+
 
 function App() {
+
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='appContainer'>
+      <Row>
+        <Col sm='4' className='mt-5'>
+          <LeftPanel />
+          {/* <Search onSearchChange={handleOnSearchChange} /> */}
+        </Col>
+        <Col sm='8' className='mt-5'>
+          <WeatherPanelList />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
